@@ -20,8 +20,10 @@ jobs:
           pixi run pkoffee analyze --data-file coffee_productivity.csv --output fitted_models.toml --show-rankings
           pixi run pkoffee plot --data-file coffee_productivity.csv --models fitted_models.toml --output analysis.png --y-max 7
 
-      - name: upload the plot
+      - name: upload results
         uses: actions/upload-artifact@v6
         with:
-          name: plot
-          path: analysis/analysis.png
+          name: results
+          path: |
+            analysis/analysis.png
+            analysis/fitted_models.toml
