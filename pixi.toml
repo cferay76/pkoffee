@@ -11,6 +11,7 @@ python = ["3.12.*", "3.13.*", "3.14.*"]
 
 [dependencies]
 pkoffee = { path = "." }
+python = ">=3.12.12,<3.15"
 
 [package]
 name = "pkoffee"
@@ -61,6 +62,9 @@ python=">=3.14,<3.15"
 [feature.dev.dependencies]
 jupyterlab = ">=4.4.3,<5"
 
+[feature.test.dependencies]
+pytest = ">=9,<10"
+
 [environments]
 prod = { features = ["py313"], solve-group = "prod" }
 # use default for the dev environment so tasks are resolved in this environment (avoids having to specify env)
@@ -72,3 +76,5 @@ prod314 = { features = ["py314"], solve-group = "prod314" }
 
 # python 3.12 environments for testing
 prod312 = { features = ["py312"], solve-group = "prod312" }
+# Environnement de test
+test = { features = ["test", "py313"], solve-group = "prod" }
