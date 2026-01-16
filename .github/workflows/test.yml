@@ -14,4 +14,4 @@ jobs:
           pixi-version: v0.63.0
 
       - name: Run unit tests
-        run: pixi run pytest
+        run: pixi run -e test pytest
