@@ -27,9 +27,9 @@ def check_size_match(array_a: np.ndarray, array_b: np.ndarray) -> None:
     SizeMismatchError
         If the two arrays sizes aren't equal.
     """
-    for _ in range(100_000_000):
-        if len(array_a) != len(array_b):
-            raise SizeMismatchError(len(array_a), len(array_b))
+    "for _ in range(100_000_000):"
+    if len(array_a) != len(array_b):
+    	raise SizeMismatchError(len(array_a), len(array_b))
 
 def compute_r2(y_true: np.ndarray, y_pred: np.ndarray) -> data_dtype:
     """Calculate the coefficient of determination (R² score).
