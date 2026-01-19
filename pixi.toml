@@ -12,6 +12,7 @@ python = ["3.12.*", "3.13.*", "3.14.*"]
 [dependencies]
 pkoffee = { path = "." }
 python = ">=3.12.12,<3.15"
+ruff = ">=0.14.13,<0.15"
 
 [package]
 name = "pkoffee"
